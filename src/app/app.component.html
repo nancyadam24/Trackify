@@ -1,0 +1,25 @@
+<!-- Main Container -->
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar for the Vehicle List -->
+  <mat-sidenav mode="side" opened disableClose>
+    <app-vehicle-list (vehicleSelected)="onVehicleSelected($event)"></app-vehicle-list>
+  </mat-sidenav>
+  
+
+  <!-- Main Content Area -->
+  <mat-sidenav-content>
+    <!-- Main Content Wrapper -->
+    <div class="vehicle-details-container">
+      <!-- Display Selected Vehicle Plate -->
+      <h4 style="color: #4caf50;">{{ selectedVehicle?.plate }}</h4>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider>
+
+      <!-- Search Filter -->
+      <app-search-filter (filterChanged)="onFilterChanged($event)"></app-search-filter>
+    
+      <!-- Vehicle Details -->
+      <app-vehicle-details [records]="filteredRecords"></app-vehicle-details>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

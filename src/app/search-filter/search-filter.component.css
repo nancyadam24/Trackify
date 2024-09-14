@@ -1,0 +1,38 @@
+.search-filter-form {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.search-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+  }
+  
+  button {
+    border-radius: 20px; 
+  }
+  
+  @media (max-width: 768px) {
+    .search-buttons {
+      flex-direction: column; 
+      gap: 5px; 
+    }
+  }
+  
+  
+@media (min-width: 768px) {
+    .search-filter-form {
+      flex-direction: row; 
+    }
+}
+  
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; 
+}
+  

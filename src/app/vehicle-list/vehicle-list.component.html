@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar -->
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-nav-list>
+      <div class="vehicle-header">
+        <mat-icon>directions_car</mat-icon> Ενεργά Οχήματα
+      </div>
+      <mat-divider></mat-divider>
+      <mat-list-item 
+        *ngFor="let vehicle of vehicles" 
+        (click)="selectVehicle(vehicle)" 
+        [ngClass]="{'vehicle-item': true, 'selected': vehicle.plate === selectedVehicle}">
+        <mat-icon>directions_car</mat-icon>
+        <span>{{ vehicle.plate }}</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,73 @@
+.selected {
+    background-color: #e0f7fa;
+}
+  
+.vehicle-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #4caf50;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: default;
+}
+
+.vehicle-item {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.vehicle-item.selected {
+    background-color: #e0e0e0; 
+    border-radius: 0;
+}
+
+.vehicle-item:hover {
+    background-color: #e0e0e0;
+    border-radius: 0px;
+    padding: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.mat-list-item.mat-mdc-list-item:hover,
+.mat-list-item.mat-mdc-list-item {
+    background-color: transparent !important; 
+}
+
+.mat-list-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.sidenav-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.vehicle-details-container h4 {
+    color: #4caf50 !important; 
+}
+
+@media (max-width: 1024px) {
+    .vehicle-header {
+      font-size: 18px; 
+      padding: 8px; 
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .vehicle-header {
+      font-size: 12px; 
+      padding: 5px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vehicle-header {
+      font-size: 12px; 
+      padding: 4px;
+    }
+  }

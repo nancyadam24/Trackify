@@ -1,0 +1,37 @@
+<!-- Search Filter Form -->
+<form [formGroup]="filterForm" (ngSubmit)="onSearch()" class="search-filter-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Σειρά-Αριθμός</mat-label>
+    <input matInput placeholder="Σειρά-Αριθμός" formControlName="serialNumber">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Οδηγός</mat-label>
+    <mat-select formControlName="driver">
+      <mat-option *ngFor="let driver of drivers" [value]="driver.fullName">
+        {{ driver.fullName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Ημερομηνία</mat-label>
+    <input matInput [matDatepicker]="picker" placeholder="Ημερομηνία" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Κατάσταση</mat-label>
+    <mat-select formControlName="status">
+      <mat-option *ngFor="let status of statuses" [value]="status.value">
+        {{ status.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="search-buttons">
+    <button mat-raised-button color="primary" (click)="onSearch()">Αναζήτηση</button>
+    <button mat-raised-button color="primary" style="background-color: #adb5d2;" (click)="onReset()">Επαναφορά</button>
+  </div>  
+</form>
