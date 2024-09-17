@@ -260,5 +260,6 @@ The project avoids backend dependencies by sourcing data from JSON files:
 - **Angular Material Component Library** for UI elements
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/90e0b76c-9490-4d55-9d43-107402ba4274)
+![image](https://github.com/user-attachments/assets/45cf3f13-363e-4c09-8adb-a742502c5942)
+
 
